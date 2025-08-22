@@ -7,7 +7,7 @@ export const Home: React.FC = () => {
   const navigate = useNavigate();
   const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    navigate('/contact', {
+    navigate('/calendar/contact', {
       state: {
         background: location,
       },

@@ -17,14 +17,14 @@ export const App = () => {
   return (
     <div className="app" data-cy="app">
       <Routes location={background || location}>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/success" element={<Success />} />
+        <Route path="/calendar/" element={<Home />} />
+        <Route path="/calendar/contact" element={<Contact />} />
+        <Route path="/calendar/success" element={<Success />} />
       </Routes>
       {background && (
         <Routes>
           <Route
-            path="/contact"
+            path="/calendar/contact"
             element={
               <Modal onClose={onCLose}>
                 <Contact />
@@ -32,7 +32,7 @@ export const App = () => {
             }
           />
           <Route
-            path="/success"
+            path="/calendar/success"
             element={
               <Modal type={TModalType.SUCCESS} onClose={onCLose}>
                 <Success />

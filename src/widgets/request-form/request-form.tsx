@@ -30,7 +30,7 @@ export const RequestForm: React.FC = () => {
     } else {
       dispatch(sendRequest(values))
         .then(() => {
-          navigate('/success', {
+          navigate('/calendar/success', {
             state: {
               background: location.state?.background || location,
             },
