@@ -1,0 +1,49 @@
+@use '@styles/variables' as vars;
+
+.field-holder {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border: solid 2px vars.$blue;
+  border-radius: 8px;
+
+  &.checked {
+    background-color: vars.$blue;
+  }
+
+  svg {
+    width: 15px;
+    height: 10.5px;
+    fill: vars.$white;
+  }
+}
+
+label {
+  display: inline-flex;
+  flex-shrink: 0;
+  gap: 16px;
+}
+
+.label {
+  display: inline-block;
+  font-size: 12px;
+}
+
+.is-error {
+  border: solid 1px vars.$red;
+}
+
+.message {
+  margin-top: 19px;
+}

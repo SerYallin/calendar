@@ -1,0 +1,47 @@
+@use '@styles/variables' as vars;
+
+/* Основной контейнер формы */
+
+.fields-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+
+  @media screen and (min-width: vars.$tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 32px;
+  }
+
+
+  & > div {
+    width: 100%;
+  }
+
+  &.g4 {
+    & > div:nth-child(1) {
+      order: 1;
+    }
+
+    & > div:nth-child(2) {
+      order: 2;
+
+      @media screen and (min-width: vars.$tablet) {
+        order: 3;
+      }
+    }
+
+    & > div:nth-child(3) {
+      order: 3;
+
+      @media screen and (min-width: vars.$tablet) {
+        order: 2;
+      }
+    }
+
+    & > div:nth-child(4) {
+      order: 4;
+    }
+  }
+}

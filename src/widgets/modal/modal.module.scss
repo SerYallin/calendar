@@ -1,0 +1,95 @@
+@use '@styles/variables' as vars;
+
+.container {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  z-index: 9999;
+  width: calc(100% - 32px);
+  min-width: 288px;
+  max-width: 764px;
+  background-color: #ffffff;
+  border-radius: 32px;
+  transform: translate(-50%);
+
+  .btn-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+
+  @media screen and (min-width: vars.$tablet) {
+    top: 50%;
+    width: calc(100% - 96px);
+    transform: translate(-50%, -50%);
+
+    .btn-close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+    }
+  }
+}
+
+.content {
+  padding-inline: 16px;
+  padding-block: 24px;
+
+  @media screen and (min-width: vars.$tablet) {
+    padding-inline: 72px;
+    padding-block: 48px;
+  }
+}
+
+.type-success {
+  width: clamp(288px, calc(100% - 96px), 500px);
+  padding: 8px 36px 16px 64px;
+  border-radius: 12px;
+
+  .content {
+    padding: 0;
+  }
+
+  .btn-close {
+    top: 8px;
+    right: 8px;
+  }
+
+  @media screen and (min-width: vars.$tablet) {
+    padding: 12px 40px 20px 84px;
+
+    .btn-close {
+      top: 12px;
+      right: 12px;
+    }
+  }
+}
+
+.icon {
+  position: absolute;
+  top: 16px;
+  left: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  svg {
+    width: 15px;
+  }
+
+  @media screen and (min-width: vars.$tablet) {
+    top: 20px;
+    left: 32px;
+  }
+}
+
+.icon-success {
+  background-color: vars.$light-green;
+
+  svg {
+    fill: vars.$green;
+  }
+}

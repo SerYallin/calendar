@@ -1,0 +1,11 @@
+@use '@styles/variables' as vars;
+
+.message {
+  margin: -19px 0 0;
+  color: vars.$text;
+  font-size: 14px;
+
+  &.is-error {
+    color: vars.$red;
+  }
+}

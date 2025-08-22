@@ -1,0 +1,11 @@
+@use '@styles/variables' as vars;
+
+.options {
+  padding: 4px 2px;
+  border-bottom: dotted 1px vars.$text;
+  cursor: pointer;
+}
+
+.active {
+  box-shadow: 0 2px 12px 2px rgb(vars.$text, 0.2);
+}

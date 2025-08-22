@@ -1,0 +1,19 @@
+@use '@styles/variables' as vars;
+
+.content {
+  margin: 0 auto;
+  font-size: 14px;
+
+  @media screen and (min-width: vars.$tablet) {
+    font-size: 16px;
+  }
+}
+
+.title {
+  font-size: 16px;
+  text-align: left;
+
+  @media screen and (min-width: vars.$tablet) {
+    font-size: 18px;
+  }
+}

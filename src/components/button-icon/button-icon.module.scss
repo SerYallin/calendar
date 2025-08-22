@@ -1,0 +1,198 @@
+@use '@styles/variables' as vars;
+
+.icon {
+  $root: &;
+  justify-content: center;
+  color: vars.$text;
+  background-color: transparent;
+  border: none;
+  padding-block: 0;
+  padding-inline: 0;
+
+  svg {
+    height: auto;
+  }
+
+  &-small {
+    svg {
+      width: 10px;
+    }
+  }
+
+  &-medium {
+    svg {
+      width: 14px;
+    }
+  }
+
+  &-large {
+    svg {
+      width: 18px;
+    }
+  }
+
+  &-dark {
+    color: vars.$white;
+    background-color: vars.$text;
+
+    svg {
+      fill: vars.$white;
+    }
+
+    &:hover {
+      background-color: vars.$blue;
+    }
+
+    &:active {
+      background-color: vars.$text;
+    }
+
+    &:disabled {
+      color: vars.$text-disable;
+      background-color: vars.$disable-bg;
+
+      svg {
+        fill: vars.$text-disable;
+      }
+    }
+  }
+
+  &-light {
+    background-color: vars.$white;
+
+    &:hover {
+      background-color: vars.$primary;
+    }
+
+    &:active {
+      background-color: vars.$primary-active;
+    }
+
+    &:disabled {
+      color: rgb(vars.$text, 0.35);
+      background-color: rgb(vars.$white, 0.5);
+
+      svg {
+        fill: rgb(vars.$text, 0.35);
+      }
+    }
+  }
+
+  &-blue {
+    background-color: vars.$secondary;
+
+    &:hover {
+      background-color: vars.$primary;
+    }
+
+    &:active {
+      background-color: vars.$primary-active;
+    }
+
+    &:disabled {
+      color: rgb(vars.$text, 0.35);
+      background-color: rgb(vars.$secondary, 0.35);
+
+      svg {
+        fill: rgb(vars.$text, 0.35);
+      }
+    }
+  }
+
+  &-light-gray {
+    color: rgb(vars.$white, 0.8);
+    background-color: rgb(vars.$white, 0.1);
+
+    svg {
+      fill: rgb(vars.$white, 0.8);
+    }
+
+    &:hover {
+      color: vars.$white;
+      background-color: rgb(vars.$white, 0.15);
+
+      svg {
+        fill: vars.$white;
+      }
+    }
+
+    &:active {
+      color: vars.$white;
+      background-color: rgb(vars.$white, 0.25);
+
+      svg {
+        fill: vars.$white;
+      }
+    }
+  }
+
+  &-gray {
+    color: rgb(vars.$text, 0.5);
+    background-color: rgb(vars.$text, 0.05);
+
+    svg {
+      fill: rgb(vars.$text, 0.5);
+    }
+
+    &:hover {
+      color: vars.$text;
+      background-color: rgb(vars.$text, 0.1);
+
+      svg {
+        fill: vars.$text;
+      }
+    }
+
+    &:active {
+      color: vars.$text;
+      background-color: rgb(vars.$text, 0.2);
+
+      svg {
+        fill: vars.$text;
+      }
+    }
+  }
+
+  &-square {
+    aspect-ratio: 1 / 1;
+    padding: 8px;
+    border-radius: 8px;
+    &#{$root}-small {
+      svg {
+        width: 16px;
+      }
+    }
+    &#{$root}-medium {
+      svg {
+        width: 24px;
+      }
+    }
+    &#{$root}-large {
+      svg {
+        width: 32px;
+      }
+    }
+  }
+
+  &-round,
+  &-icon24 {
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+  }
+
+  &-no-border {
+    padding: 4px;
+    &#{$root}-small {
+      padding-block: 2px;
+    }
+  }
+
+  &-icon24 {
+    width: 24px;
+    height: 24px;
+
+    svg {
+      width: 10px;
+    }
+  }
+}

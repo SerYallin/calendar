@@ -1,0 +1,101 @@
+@use '@styles/variables' as vars;
+
+.button {
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  color: vars.$text80;
+  background-color: transparent;
+  border: solid 1px transparent;
+  border-radius: 8px;
+
+  svg {
+    z-index: 0;
+    width: auto;
+    height: 14px;
+    fill: vars.$text80;
+  }
+
+  &:hover {
+    color: vars.$blue-hover;
+
+    svg {
+      fill: vars.$blue-hover;
+    }
+  }
+
+  &:active {
+    color: vars.$text80;
+
+    svg {
+      fill: vars.$text80;
+    }
+  }
+
+  &-primary {
+    background-color: vars.$primary;
+
+    &:hover {
+      background-color: vars.$primary-hover;
+    }
+
+    &:active {
+      background-color: vars.$primary-active;
+    }
+  }
+
+  &-secondary {
+    background-color: vars.$secondary;
+
+    &:hover {
+      background-color: vars.$secondary-hover;
+    }
+
+    &:active {
+      background-color: vars.$secondary-active;
+    }
+  }
+
+  &-tertiary {
+    background-color: vars.$tertiary;
+    border-color: vars.$text35;
+
+    &:hover {
+      background-color: vars.$tertiary-hover;
+    }
+
+    &:active {
+      background-color: vars.$tertiary-active;
+    }
+  }
+
+  &-custom {
+    background-color: transparent;
+  }
+
+  &-small {
+    padding-inline: 24px;
+    padding-block: 8px;
+  }
+
+  &-medium {
+    padding-inline: 32px;
+    padding-block: 20.5px;
+  }
+
+  &-large {
+    padding-inline: 40px;
+    padding-block: 26px;
+  }
+}
+
+.disabled {
+  color: vars.$text-disable;
+  background-color: vars.$disable-bg;
+  pointer-events: none;
+
+  svg {
+    fill: vars.$text-disable;
+  }
+}

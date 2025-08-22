@@ -1,0 +1,29 @@
+@use '@styles/variables' as vars;
+
+.monthHolder {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.header {
+  position: sticky;
+  left: 0;
+  width: max-content;
+  color: vars.$text;
+  font-size: 16px;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.dayList {
+  display: inline-flex;
+  gap: 0;
+  margin: 0;
+  padding: 0 0 24px;
+  list-style: none;
+
+  @media screen and (min-width: vars.$tablet) {
+    gap: 8px;
+  }
+}

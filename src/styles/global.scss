@@ -1,0 +1,37 @@
+@use 'variables' as vars;
+@use 'fonts/fonts';
+@use 'text';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  color: vars.$text;
+  background-color: #d4d4d4;
+}
+
+
+header {
+  text-align: center;
+}
+
+button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 1em;
+  font-size: inherit;
+  font-family: inherit;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+p {
+  margin: 0;
+}

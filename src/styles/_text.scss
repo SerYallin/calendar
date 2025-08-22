@@ -1,0 +1,40 @@
+@use 'variables' as vars;
+
+body {
+  font-size: 14px;
+  font-family: vars.$main-font-family;
+  line-height: 1.4;
+
+  @media screen and (min-width: vars.$tablet) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: vars.$desktop) {
+    font-size: 18px;
+  }
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.2;
+
+  @media screen and (min-width: vars.$tablet) {
+    font-size: 30px;
+  }
+
+  @media screen and (min-width: vars.$desktop) {
+    font-size: 34px;
+  }
+
+  @media screen and (min-width: vars.$large) {
+    font-size: 44px;
+  }
+}
+
+
+button {
+  font-weight: 500;
+  font-size: inherit;
+  line-height: 1.2;
+}
